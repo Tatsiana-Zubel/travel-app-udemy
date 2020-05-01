@@ -1,1 +1,1 @@
-Making Travel Agency page dynamic with JJavascript
+Making Travel Agency page dynamic with Javascript
