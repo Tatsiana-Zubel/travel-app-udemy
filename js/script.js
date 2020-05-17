@@ -138,7 +138,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     let request = new XMLHttpRequest();
                     request.open('POST', 'server.php');
                     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
+ 
                     request.onreadystatechange = function () {
                         if (request.readyState < 4) {
                             resolve()
@@ -159,14 +159,8 @@ window.addEventListener('DOMContentLoaded', function () {
                     input[i].value = '';
                 }
             }
-
             postData(formData)
-                .then(() => StatusMessage.innerHTML = message.loading)
-                .then(() => {
-                    thankModal.style.display = 'block';
-                    mainModal.style.display = 'none';
-                    statusMessage.innerHTML = '';
-                })
+                .then(() => statusMessage.innerHTML = message.success)
                 .catch(() => statusMessage.innerHTML = message.failure)
                 .then(clearInput)
         });
